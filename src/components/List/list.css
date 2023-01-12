@@ -1,0 +1,20 @@
+/* .listPokemon-container{
+    display: flex;
+    margin: 1rem;
+ 
+    align-items: center;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 31, 31, 0.8295693277310925) 0%,
+        rgba(251, 215, 67, 1) 31%,
+        rgba(93, 185, 255, 1) 100%
+      );
+    
+} */
+
+.listPokemon-container{
+    display: flex;
+    justify-content: center;
+
+}
+

@@ -1,0 +1,28 @@
+.title-visualization{
+    text-align: center;
+    color: var(--fourth-color);
+    margin-top: 1rem;
+}
+
+.visualization-container{
+    /* background-color: var(--third-color); */
+    display: flex;
+    justify-content: center;
+
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.visualization-container div{
+    border-radius: 3px;
+    border: 3px solid var(--fourth-color);
+    padding: 5px;
+    cursor:pointer;
+    transition: 0.5s;
+
+}
+.visualization-container div:hover{
+    transform: scale(1.10);
+   
+
+}

@@ -1,0 +1,14 @@
+.grid-pokemons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    justify-items: center;
+    margin: 2rem;
+}
+
+@media screen and (max-width: 426px) {
+    .grid-pokemons{
+          grid-template-columns: repeat(1, 1fr);
+    }
+  
+}
