@@ -10,10 +10,11 @@ import VisualizationContextProvider from "./context/VisualizationContext";
 import FavouriteContextProvider from "./context/FavouriteContext";
 import PaginationContextProvider from "./context/PaginationContext";
 import Footer from "./components/layout/Footer/Footer";
+import { ThemeContextProvider } from "./context/ThemeContext";
 
 const App: FC = () => {
   return (
-    <>
+    <ThemeContextProvider>
       <ServiceContextProvider>
         <VisualizationContextProvider>
           <FavouriteContextProvider>
@@ -29,7 +30,7 @@ const App: FC = () => {
           </FavouriteContextProvider>
         </VisualizationContextProvider>
       </ServiceContextProvider>
-    </>
+    </ThemeContextProvider>
   );
 };
 

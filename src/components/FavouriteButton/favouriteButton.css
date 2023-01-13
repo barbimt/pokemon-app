@@ -1,36 +1,59 @@
 .favouriteButton {
-    /* position: absolute; */
-    /* z-index: 2;
-  
-    background-color: var(--secondary-color);
-    border-radius: 50%;
-   
-    width: 30%;
-    height: 40%;
-    right: 0;
-  } */
+  background-color: white;
+  display: flex;
+  width: 25%;
+  padding: 0.4rem;
+
+  justify-content: space-around;
+  cursor: pointer;
+
+  border-color: white;
+
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+  border: 4px solid var(--third-color);
+  background-color: var(--third-color);
+}
+
+.favouriteButton:hover {
+  background-color: var(--third-color);
+}
+
+.favouriteButtonList {
   display: flex;
   width: 100%;
   padding: 0.5rem;
   justify-content: space-around;
   cursor: pointer;
-  background:none;
+  background: none;
   border-color: white;
-  
-      color: inherit;
-      border: none;
-      font: inherit;
-      cursor: pointer;
-      outline: inherit;
-  
-  }
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  width: auto;
+  height: 100%;
+  border: 3px solid var(--third-color);
+  /* background-color: var(--third-color); */
+  border-radius: 10px;
+  margin-left: 1rem;
+  transition: 0.5s;
 
-  .favouriteButtonList{
-    width: auto;
-    height: 100%;
-  }
-  
-  .fa-star{
-    color: var(--fourth-color);
-  }
+  box-shadow: 0 0 3px var(--third-color), 0 0 5px var(--fourth-color);
 
+}
+
+.favouriteButtonList:hover{
+  transform: scale(1.05);
+}
+
+.fa-star {
+  color: var(--fourth-color);
+}

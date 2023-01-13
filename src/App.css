@@ -25,10 +25,18 @@ body{
   padding: 0;
 }
 
+
+
+.dark{
+  background-color: var(--darkmode);
+
+}
+
 :root {
   --main-color: #FF1F1F;
   --secondary-color: #FBD743;
   --third-color: #5DB9FF;
   --fourth-color: #363B81;
+  --darkmode: #292929;
 }
 

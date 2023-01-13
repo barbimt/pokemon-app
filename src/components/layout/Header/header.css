@@ -3,7 +3,10 @@ header {
   border-bottom: 1px solid #d0d0d0;
   width: 100%;
   color: black;
-  padding: 25px ;
+  padding: 25px;
+}
+.header-dark {
+  background-color: var(--darkmode);
 }
 
 header > div {
@@ -12,11 +15,19 @@ header > div {
   justify-content: space-between;
   align-items: center;
 }
+header div nav {
+  display: flex;
+  align-items: center;
+}
 
 header > div h2 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
   margin: 0;
-  background: linear-gradient(to right, var(--main-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--secondary-color) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -27,57 +38,58 @@ header > div nav ul {
 }
 header > div nav ul li {
   list-style: none;
-
 }
 
 header > div nav ul li a {
   padding: 5px 20px;
   text-decoration: none;
   color: var(--fourth-color);
- 
+
   font-size: 1.2rem;
   font-weight: 500;
 }
-header > div nav ul li a:hover{
-    color: var(--third-color);
+
+.ul-darkMode li a{
+  color: var(--third-color);
+}
+.ul-darkMode li a:hover{
+  color: var(--secondary-color);
+}
+header > div nav ul li a:hover {
+  color: var(--third-color);
 }
 
 header > div h2 {
   color: var(--main-color);
 }
-.containerIconBurger{
+.containerIconBurger {
   display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    align-content: space-around;
-    width: 100%;
-    margin-right: 20px;
-    
+  justify-content: flex-end;
+  align-items: center;
+  align-content: space-around;
+  width: 100%;
+  margin-right: 20px;
 }
-.header-mobile{
-  
+.header-mobile {
   display: flex;
-position: absolute;
-    justify-content: flex-end;
-    width: 30%;
-    background-color: red;
-    right: 0;
-    height: 100%;
-    align-items: center;
-
-   
+  position: absolute;
+  justify-content: flex-end;
+  width: 30%;
+  background-color: red;
+  right: 0;
+  height: 100%;
+  align-items: center;
 }
 
 .header-mobile ul li {
-  list-style: none; margin-top: 1rem;
+  list-style: none;
+  margin-top: 1rem;
 }
 
 .header-mobile > ul li a {
-
   text-decoration: none;
 
   margin-right: 1.5rem;
   color: var(--fourth-color);
- list-style: none;
-
+  list-style: none;
 }

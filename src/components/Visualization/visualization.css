@@ -1,14 +1,20 @@
 .title-visualization{
     text-align: center;
     color: var(--fourth-color);
-    margin-top: 1rem;
+    padding-top: 1rem;
+ font-weight: 700;
+    letter-spacing: 0px;
+    font-size: 1.8rem;
+    font-family: "Quicksand", sans-serif;
 }
 
+
+.title-dark{
+    color: var(--third-color);
+}
 .visualization-container{
-    /* background-color: var(--third-color); */
     display: flex;
     justify-content: center;
-
     margin: 1rem;
     gap: 1rem;
 }
@@ -19,14 +25,16 @@
     padding: 5px;
     cursor:pointer;
     transition: 0.5s;
-
 }
+
 .visualization-container div:hover{
     transform: scale(1.10);
-   
-
 }
 
 .fa-list, .fa-grip{
     color: var(--fourth-color);
+}
+
+.fa-listDark, .fa-gripDark {
+    color: var(--third-color);
 }

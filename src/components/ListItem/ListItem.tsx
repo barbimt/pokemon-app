@@ -5,16 +5,18 @@ import { useNavigate } from "react-router-dom";
 import { FavouriteContext } from "../../context/FavouriteContext";
 
 import "./listItem.css";
+import { useTheme } from "../../hooks/useTheme";
 
 const ListItem: FC<{ pokemon: PokemonDetail }> = ({ pokemon }) => {
   const { favouritePokemons, toggleFavourite } = useContext(FavouriteContext);
+  const {darkMode} = useTheme();
   let navigate = useNavigate();
   const redirectToDetailPage = () => {
     navigate(`/detail/${pokemon.id}`, { state: { pokemon: pokemon } });
   };
 
   return (
-    <div className="listPokemon">
+    <div className={`${darkMode ? "listPokemon darkList" : "listPokemon"}`}>
       <div className="bg-opacity-list"></div>
       <li onClick={redirectToDetailPage}>{pokemon.name}</li>
       <FavouriteButton

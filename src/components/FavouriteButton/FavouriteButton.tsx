@@ -9,12 +9,11 @@ const FavouriteButton: FC<{ onClick: MouseEventHandler<HTMLButtonElement>; isFav
   onClick,
 }) => {
   const { styleSelected } = useStyle();
-  //const src = isFavourite ? "/images/star-filled.png" : "/images/star.png";
 
   return (
     <>
       <button
-        className={styleSelected === "grid" ? "favouriteButton" : "favouriteButton favouriteButtonList"}
+        className={styleSelected === "grid" ? "favouriteButton" : "favouriteButtonList"}
         onClick={onClick}
       >
       {isFavourite ? (
