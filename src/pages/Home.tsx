@@ -4,11 +4,10 @@ import { ServiceContext } from "../context/ServiceContext";
 import Visualization from "../components/Visualization/Visualization";
 import List from "../components/List/List";
 import { useStyle } from "../hooks/useStyle";
-import { PaginationContext } from "../context/PaginationContext";
+import Pagination from "../components/Pagination/Pagination";
 
 const Home: FC = () => {
   const { pokemons, getPokemonsAxios } = useContext(ServiceContext);
-  const { nextPage, page, prevPage } = useContext(PaginationContext);
 
   const { styleSelected } = useStyle();
 
@@ -17,11 +16,8 @@ const Home: FC = () => {
   return (
     <div>
       <Visualization />
-
-      <button onClick={nextPage}>next</button>
-      <button disabled={page === 1} onClick={prevPage}>
-        previous
-      </button>
+      <Pagination />
+   
 
       {styleSelected === "grid" ? (
         <Grid pokemons={pokemons} />

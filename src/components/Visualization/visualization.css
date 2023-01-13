@@ -26,3 +26,7 @@
    
 
 }
+
+.fa-list, .fa-grip{
+    color: var(--fourth-color);
+}
