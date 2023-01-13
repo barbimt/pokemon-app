@@ -4,11 +4,11 @@ ul {
 .listPokemon {
   display: flex;
   margin: 1rem;
-  width: 70%;
-  justify-content: center;
+  width: 50%;
+  justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 0.5rem;
+  padding: 0.8rem 0.4rem;
 }
 
 .listPokemon li,
@@ -18,9 +18,9 @@ button {
 
 .bg-opacity-list {
   background: linear-gradient(
-    180deg,
+    90deg,
     rgba(255, 31, 31, 0.8295693277310925) 0%,
-    rgba(251, 215, 67, 1) 31%,
+    rgba(251, 215, 67, 1) 51%,
     rgba(93, 185, 255, 1) 100%
   );
   position: absolute;
@@ -29,6 +29,9 @@ button {
   width: 100%;
   height: 100%;
   border-radius: 6px;
+  box-shadow: 7px 9px 13px -7px rgba(0,0,0,0.77);
+-webkit-box-shadow: 7px 9px 13px -7px rgba(0,0,0,0.77);
+-moz-box-shadow: 7px 9px 13px -7px rgba(0,0,0,0.77);
 }
 
 .listPokemon li {
@@ -37,6 +40,7 @@ button {
   cursor: pointer;
   text-transform: capitalize;
   letter-spacing: 3px;
+  padding-left: 0.5rem;
 }
 
 .darkList li {

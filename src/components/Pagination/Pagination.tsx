@@ -11,7 +11,7 @@ const Pagination: FC = () => {
   const { nextPage, page, prevPage } = useContext(PaginationContext);
 
   return (
-    <div className={`${darkMode ? "pagination-container darkButton" : "pagination-container" }`}>
+    <div className={darkMode ? "pagination-container darkButton" : "pagination-container" }>
       <button disabled={page === 1} onClick={prevPage}>
         <FontAwesomeIcon icon={faArrowAltCircleLeft} />
         Previous

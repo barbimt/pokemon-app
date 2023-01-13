@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect, useState } from "react";
+import { FC, useContext, useEffect } from "react";
 import Grid from "../components/Grid/Grid";
 import { ServiceContext } from "../context/ServiceContext";
 import Visualization from "../components/Visualization/Visualization";
@@ -12,10 +12,15 @@ const Home: FC = () => {
   const { darkMode } = useTheme();
   const { styleSelected } = useStyle();
 
-  useEffect(getPokemonsAxios, []);
+  useEffect(()=> {
+    if (!(pokemons.length > 0)) {
+       getPokemonsAxios()
+    } 
+
+  }, []);
 
   return (
-    <div className={`${darkMode ? "dark" : "" }`}>
+    <div className={darkMode ? "dark" : "" }>
       <Visualization />
       <Pagination />
       {styleSelected === "grid" ? (

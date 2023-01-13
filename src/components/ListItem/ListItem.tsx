@@ -16,7 +16,7 @@ const ListItem: FC<{ pokemon: PokemonDetail }> = ({ pokemon }) => {
   };
 
   return (
-    <div className={`${darkMode ? "listPokemon darkList" : "listPokemon"}`}>
+    <div className={darkMode ? "listPokemon darkList" : "listPokemon"}>
       <div className="bg-opacity-list"></div>
       <li onClick={redirectToDetailPage}>{pokemon.name}</li>
       <FavouriteButton

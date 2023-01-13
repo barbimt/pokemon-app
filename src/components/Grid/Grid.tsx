@@ -19,7 +19,7 @@ const Grid: FC<{ pokemons: PokemonDetail[] }> = ({ pokemons }) => {
   // }
   return (
     <div className="grid-pokemons">
-      {pokemons.map((pokemon: PokemonDetail, index) => {
+      { pokemons.map((pokemon: PokemonDetail, index) => {
         return (
           <div key={index}>
             <Card pokemon={pokemon} />

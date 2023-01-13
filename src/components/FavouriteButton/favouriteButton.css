@@ -19,6 +19,8 @@
 
   border: 4px solid var(--third-color);
   background-color: var(--third-color);
+  z-index: 0;
+  box-shadow: 0 0 3px var(--third-color), 0 0 5px var(--fourth-color);
 }
 
 .favouriteButton:hover {
@@ -41,7 +43,7 @@
   width: auto;
   height: 100%;
   border: 3px solid var(--third-color);
-  /* background-color: var(--third-color); */
+  background-color: var(--third-color);
   border-radius: 10px;
   margin-left: 1rem;
   transition: 0.5s;

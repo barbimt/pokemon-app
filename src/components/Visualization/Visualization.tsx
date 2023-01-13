@@ -11,14 +11,14 @@ const Visualization: FC = () => {
 
   return (
     <>
-      <h2 className={`${darkMode ? "title-visualization title-dark" : "title-visualization "}`}>Change layout</h2>
+      <h2 className={darkMode ? "title-visualization title-dark" : "title-visualization "}>Change layout</h2>
       <div className="visualization-container">
         <div onClick={() => onStyleSelected("grid")}>
-          <FontAwesomeIcon icon={faGrip} size="2xl" className={`${darkMode ? "fa-gripDark": ""}`}  />
+          <FontAwesomeIcon icon={faGrip} size="2xl" className={darkMode ? "fa-gripDark": ""}  />
         </div>
 
         <div onClick={() => onStyleSelected("list")}  >
-          <FontAwesomeIcon icon={faList} size="2xl" className={`${darkMode ? "fa-listDark": ""}`} />
+          <FontAwesomeIcon icon={faList} size="2xl" className={darkMode ? "fa-listDark": ""} />
         </div>
       </div>
     </>

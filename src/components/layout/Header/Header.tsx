@@ -26,14 +26,14 @@ const Header: FC = () => {
   }, []);
 
   return (
-    <header className={`${darkMode ? "header-dark" : ""}`}>
+    <header className={darkMode ? "header-dark" : ""}>
       <div>
         <div>
           <h2>PokeAPI</h2>
         </div>
         {dimensions.width >= 426 ? (
           <nav>
-            <ul className={`${darkMode ? "ul-darkMode" : ""}`}>
+            <ul className={darkMode ? "ul-darkMode" : ""}>
               <li>
                 <Link to="/">Home</Link>
               </li>

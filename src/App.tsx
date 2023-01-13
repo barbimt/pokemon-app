@@ -9,10 +9,10 @@ import ServiceContextProvider from "./context/ServiceContext";
 import VisualizationContextProvider from "./context/VisualizationContext";
 import FavouriteContextProvider from "./context/FavouriteContext";
 import PaginationContextProvider from "./context/PaginationContext";
-import Footer from "./components/layout/Footer/Footer";
 import { ThemeContextProvider } from "./context/ThemeContext";
 
 const App: FC = () => {
+  
   return (
     <ThemeContextProvider>
       <ServiceContextProvider>
@@ -20,12 +20,14 @@ const App: FC = () => {
           <FavouriteContextProvider>
             <PaginationContextProvider>
               <Header />
+            
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="favorites" element={<Favourites />} />
                 <Route path="detail/:id" element={<Detail />} />
               </Routes>
-              <Footer />
+           
+        
             </PaginationContextProvider>
           </FavouriteContextProvider>
         </VisualizationContextProvider>

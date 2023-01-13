@@ -4,6 +4,16 @@
     grid-gap: 25px;
     justify-items: center;
     padding: 2rem;
+   
+}
+
+.grid-pokemons-vacio{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    justify-items: center;
+    padding: 2rem;
+    height: 100vh;
 }
 
 @media screen and (max-width: 426px) {
