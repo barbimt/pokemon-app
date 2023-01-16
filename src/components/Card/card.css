@@ -6,9 +6,12 @@
   position: relative;
   cursor: pointer;
 
+
 }
 .card-pokemon:hover {
   transform: scale(1.05);
+
+  
 }
 .bg-opacity {
   background: linear-gradient(
@@ -44,6 +47,8 @@
   z-index: 2;
   border: 6px solid var(--third-color);
   border-radius: 8px;
+
+
 }
 
 .container-favourite{

@@ -25,7 +25,7 @@ const Card: FC<{ pokemon: PokemonDetail }> = ({ pokemon }) => {
         />
       </div>
 
-      <div className="card-pokemon" >
+      <div className="card-pokemon">
         <div className="bg-opacity"></div>
         <div className="card-pokemon-info" onClick={redirectToDetailPage}>
           <img

@@ -20,11 +20,13 @@
 }
 
 .visualization-container div{
-    border-radius: 3px;
+    border-radius: 4px;
     border: 3px solid var(--fourth-color);
     padding: 5px;
     cursor:pointer;
     transition: 0.5s;
+    box-shadow: 0 0 2px var(--third-color), 0 0 4px var(--fourth-color);
+
 }
 
 .visualization-container div:hover{
@@ -33,6 +35,7 @@
 
 .fa-list, .fa-grip{
     color: var(--fourth-color);
+
 }
 
 .fa-listDark, .fa-gripDark {

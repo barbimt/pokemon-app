@@ -1,37 +1,38 @@
-import React, { FC, useState, useEffect } from "react";
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
+import { faBarsStaggered, faX } from "@fortawesome/free-solid-svg-icons";
 import useDisclosure from "../../../hooks/useDisclosure";
 import "./header.css";
 import HeaderMobile from "./HeaderMobile";
 import ToggleTheme from "../../ToggleTheme/ToggleTheme";
 import { useTheme } from "../../../hooks/useTheme";
+import useDimension from "../../../hooks/useDimension";
 
 const Header: FC = () => {
   const { darkMode } = useTheme();
-
-  const [dimensions, setDimensions] = useState({
-    width: window.innerWidth,
-  });
+  const {isMobile} = useDimension();
   const { isOpen, toggle } = useDisclosure();
-
-  useEffect(() => {
-    function handleResize() {
-      setDimensions({
-        width: window.innerWidth,
-      });
-    }
-    window.addEventListener("resize", handleResize);
-  }, []);
+  // const [dimensions, setDimensions] = useState({
+  //   width: window.innerWidth,
+  // });
+  // const dimensionMobile = dimensions.width >= 426;
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setDimensions({
+  //       width: window.innerWidth,
+  //     });
+  //   };
+  //   window.addEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <header className={darkMode ? "header-dark" : ""}>
       <div>
         <div>
-          <h2>PokeAPI</h2>
+          <h2 className={isMobile ? "" : "titleMobile"}>PokeAPI</h2>
         </div>
-        {dimensions.width >= 426 ? (
+        {!isMobile ? (
           <nav>
             <ul className={darkMode ? "ul-darkMode" : ""}>
               <li>
@@ -44,10 +45,19 @@ const Header: FC = () => {
             <ToggleTheme />
           </nav>
         ) : (
-          <div className="containerIconBurger" onClick={toggle}>
-            <FontAwesomeIcon icon={faBarsStaggered} />
+          <>
+            <div
+              className={isOpen ? "containerIconX" : "containerIconBurger"}
+              onClick={toggle}
+            >
+              <FontAwesomeIcon
+                icon={isOpen ? faX : faBarsStaggered}
+                className={darkMode ? "faMobileDark" : "faMobile"}
+                size="xl"
+              />
+            </div>
             {isOpen && <HeaderMobile />}
-          </div>
+          </>
         )}
       </div>
     </header>

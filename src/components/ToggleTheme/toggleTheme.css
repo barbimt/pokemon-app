@@ -5,6 +5,10 @@
   padding-left: 1rem;
 }
 
+.switchMobile{
+	margin-top: 1rem;
+}
+
 input[type="checkbox"].switch_1{
   display: flex;
 	-webkit-appearance: none;

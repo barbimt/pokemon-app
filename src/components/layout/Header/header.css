@@ -36,6 +36,7 @@ header > div nav ul {
   flex-direction: row;
   align-items: center;
 }
+
 header > div nav ul li {
   list-style: none;
 }
@@ -62,6 +63,7 @@ header > div nav ul li a:hover {
 header > div h2 {
   color: var(--main-color);
 }
+
 .containerIconBurger {
   display: flex;
   justify-content: flex-end;
@@ -69,27 +71,61 @@ header > div h2 {
   align-content: space-around;
   width: 100%;
   margin-right: 20px;
+  cursor: pointer;
 }
+
+
 .header-mobile {
   display: flex;
-  position: absolute;
   justify-content: flex-end;
-  width: 30%;
-  background-color: red;
   right: 0;
-  height: 100%;
+  padding-top: 1.5rem;
   align-items: center;
+  flex-direction: column;
+}
+
+.header-mobile ul  {
+  list-style: none;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
 }
 
 .header-mobile ul li {
-  list-style: none;
-  margin-top: 1rem;
+  padding-top: 0.5rem;
 }
 
-.header-mobile > ul li a {
+.header-mobile ul li a{
   text-decoration: none;
-
-  margin-right: 1.5rem;
   color: var(--fourth-color);
   list-style: none;
+  margin-bottom: 1rem;
+}
+
+.header-mobile li{
+  margin-bottom: 0.7rem;
+}
+
+.containerIconX{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  padding: 1rem 1.5rem;
+}
+.titleMobile{
+  font-size: 1.4rem;
+}
+
+.faMobileDark {
+  color: var(--third-color);
+}
+
+.faMobile{
+  color: var(--fourth-color);
+}
+
+.darkList ul li a{
+  color: var(--third-color);
 }

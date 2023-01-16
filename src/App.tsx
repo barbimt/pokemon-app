@@ -14,20 +14,17 @@ import { ThemeContextProvider } from "./context/ThemeContext";
 const App: FC = () => {
   
   return (
-    <ThemeContextProvider>
+    <ThemeContextProvider >
       <ServiceContextProvider>
         <VisualizationContextProvider>
           <FavouriteContextProvider>
             <PaginationContextProvider>
               <Header />
-            
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="favorites" element={<Favourites />} />
                 <Route path="detail/:id" element={<Detail />} />
               </Routes>
-           
-        
             </PaginationContextProvider>
           </FavouriteContextProvider>
         </VisualizationContextProvider>
