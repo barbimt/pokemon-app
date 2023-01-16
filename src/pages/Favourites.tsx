@@ -3,13 +3,13 @@ import Grid from "../components/Grid/Grid";
 import List from "../components/List/List";
 import Visualization from "../components/Visualization/Visualization";
 import { FavouriteContext } from "../context/FavouriteContext";
-import { useStyle } from "../hooks/useStyle";
+import { VisualizationContext } from "../context/VisualizationContext";
 import { useTheme } from "../hooks/useTheme";
 
 const Favourites: FC = () => {
   const { favouritePokemons } = useContext(FavouriteContext);
   const { darkMode } = useTheme();
-  const { styleSelected } = useStyle();
+  const {styleSelected} = useContext(VisualizationContext)
 
   return (
     <>

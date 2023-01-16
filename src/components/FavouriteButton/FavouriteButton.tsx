@@ -1,16 +1,18 @@
-import React, { FC, MouseEventHandler } from "react";
+import React, { FC, MouseEventHandler, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import "./favouriteButton.css"
-import { useStyle } from "../../hooks/useStyle";
+
+import { VisualizationContext } from "../../context/VisualizationContext";
 
 
 const FavouriteButton: FC<{ onClick: MouseEventHandler<HTMLButtonElement>; isFavourite: Boolean }> = ({
   isFavourite,
   onClick,
 }) => {
-  const { styleSelected } = useStyle();
+  const {styleSelected} = useContext(VisualizationContext)
+ 
 
   return (
     <>

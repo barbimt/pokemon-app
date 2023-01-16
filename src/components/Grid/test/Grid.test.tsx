@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import FavouriteContextProvider from "../../../context/FavouriteContext";
 import { ThemeContextProvider } from "../../../context/ThemeContext";
+import VisualizationContextProvider from "../../../context/VisualizationContext";
 import { pokemonArrayMock } from "../../../mocks/pokemonArrayMock";
 import Grid from "../Grid";
 
@@ -18,11 +19,13 @@ jest.mock("./../../../hooks/useStyle", () => ({
 describe("Grid component", () => {
   it("Should render Grid component", () => {
     render(
+      <VisualizationContextProvider>
       <ThemeContextProvider >
       <FavouriteContextProvider>
         <Grid pokemons={pokemonArrayMock} />
       </FavouriteContextProvider>
-      </ThemeContextProvider>
+      </ThemeContextProvider>   
+      </VisualizationContextProvider>
     );
     expect(screen.getAllByText("Pikachu").length).toBe(2);
 

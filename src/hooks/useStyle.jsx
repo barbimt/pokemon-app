@@ -1,7 +1,6 @@
-import { useContext } from "react";
-import { VisualizationContext } from "../context/VisualizationContext";
+// import { useContext } from "react";
+// import { VisualizationContext } from "../context/VisualizationContext";
 
-export const useStyle = () => {
-    
-    return useContext(VisualizationContext)
-}
+// export const useStyle = () => {
+//     return useContext(VisualizationContext)
+// }

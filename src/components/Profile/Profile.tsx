@@ -9,7 +9,6 @@ const Profile: FC<{ pokemon: PokemonDetail }> = ({ pokemon }) => {
     
   }; 
 
-  
   return (
     <>
       <div className="header-pokemon-detail">
