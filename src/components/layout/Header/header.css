@@ -9,6 +9,10 @@ header {
   background-color: var(--darkmode);
 }
 
+.titleHeader{
+
+}
+
 header > div {
   display: flex;
   flex-direction: row;
@@ -20,7 +24,7 @@ header div nav {
   align-items: center;
 }
 
-header > div h2 {
+.titleHeader{
   font-size: 1.8rem;
   margin: 0;
   background: linear-gradient(
@@ -116,6 +120,13 @@ header > div h2 {
 }
 .titleMobile{
   font-size: 1.4rem;
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--secondary-color) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .faMobileDark {

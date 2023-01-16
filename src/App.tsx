@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { FC } from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/layout/Header/Header";
 import Home from "./pages/Home";
 import Favourites from "./pages/Favourites";
 import Detail from "./pages/Detail";
@@ -10,6 +9,7 @@ import VisualizationContextProvider from "./context/VisualizationContext";
 import FavouriteContextProvider from "./context/FavouriteContext";
 import PaginationContextProvider from "./context/PaginationContext";
 import { ThemeContextProvider } from "./context/ThemeContext";
+import Layout from "./components/layout/Layout";
 
 const App: FC = () => {
   
@@ -19,12 +19,14 @@ const App: FC = () => {
         <VisualizationContextProvider>
           <FavouriteContextProvider>
             <PaginationContextProvider>
-              <Header />
+              <Layout>
+                {/* <Header /> */}
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="favorites" element={<Favourites />} />
                 <Route path="detail/:id" element={<Detail />} />
               </Routes>
+              </Layout>
             </PaginationContextProvider>
           </FavouriteContextProvider>
         </VisualizationContextProvider>

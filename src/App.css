@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
-
 @font-face {
   font-family: "Pokemon";
   src: url("./fonts/pokemon_solid-webfont.woff2") format("woff2"),
@@ -9,16 +8,16 @@
   font-style: normal;
 }
 
-body{
+body {
   font-family: "Pokemon", sans-serif;
   letter-spacing: 1.5px;
   height: 100%;
+  background-color: var(--background);
 }
 
- html {
+html {
   height: 100%;
 }
-
 
 * {
   box-sizing: border-box;
@@ -26,34 +25,32 @@ body{
   padding: 0;
 }
 
-
-.dark{
+.dark {
   background-color: var(--darkmode);
-
+  height: 100vh;
 }
-.empty-message-dark{
+.bg-dark {
+  background-color: var(--darkmode);
+}
+.empty-message-dark {
   background-color: var(--darkmode);
   height: 100vh;
   text-align: center;
   padding: 5rem;
   color: var(--third-color);
-  text-shadow: rgba(93,185,255,0.9) 0px 0px 37px;
-
-
+  text-shadow: rgba(93, 185, 255, 0.9) 0px 0px 37px;
 }
 
-.empty-message h2{
+.empty-message h2 {
   text-align: center;
   margin: 5rem;
   color: var(--fourth-color);
-  
 }
 
 :root {
-  --main-color: #FF1F1F;
-  --secondary-color: #FBD743;
-  --third-color: #5DB9FF;
-  --fourth-color: #363B81;
+  --main-color: #ff1f1f;
+  --secondary-color: #fbd743;
+  --third-color: #5db9ff;
+  --fourth-color: #363b81;
   --darkmode: #292929;
 }
-

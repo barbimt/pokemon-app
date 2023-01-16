@@ -4,6 +4,7 @@
     grid-gap: 25px;
     justify-items: center;
     padding: 2rem;
+
    
 }
 
@@ -16,6 +17,16 @@
     height: 100vh;
 }
 
+
+
+/*tablet*/
+@media screen and (max-width: 992px) {
+    .grid-pokemons{
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*mobile*/
 @media screen and (max-width: 426px) {
     .grid-pokemons{
           grid-template-columns: repeat(1, 1fr);

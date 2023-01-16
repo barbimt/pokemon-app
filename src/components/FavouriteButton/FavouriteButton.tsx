@@ -4,6 +4,8 @@ import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
 import "./favouriteButton.css"
 import { useStyle } from "../../hooks/useStyle";
+
+
 const FavouriteButton: FC<{ onClick: MouseEventHandler<HTMLButtonElement>; isFavourite: Boolean }> = ({
   isFavourite,
   onClick,
@@ -17,9 +19,9 @@ const FavouriteButton: FC<{ onClick: MouseEventHandler<HTMLButtonElement>; isFav
         onClick={onClick}
       >
       {isFavourite ? (
-        <FontAwesomeIcon icon={faStarSolid} size="xl"/>
+        <FontAwesomeIcon icon={faStarSolid} size="xl" data-testid="favStar"/>
       ) : (
-        <FontAwesomeIcon icon={faStarRegular} size="xl" />
+        <FontAwesomeIcon icon={faStarRegular} size="xl" data-testid="noFavStar"/>
       )}
       </button>
     </>

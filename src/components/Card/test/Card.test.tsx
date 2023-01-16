@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import FavouriteContextProvider from "../../context/FavouriteContext";
-import { pokemonMock } from "./../../mocks/pokemonMock"
-import Card from "./Card";
+import FavouriteContextProvider from "../../../context/FavouriteContext";
+import { pokemonMock } from "../../../mocks/pokemonMock"
+import Card from "../Card";
 
 export const mockUseNavigate = jest.fn();
 jest.mock("react-router-dom", () => ({
@@ -10,7 +10,7 @@ jest.mock("react-router-dom", () => ({
 }));
 
 const mockUseStyle = jest.fn();
-jest.mock("./../../hooks/useStyle", () => ({
+jest.mock("./../../../hooks/useStyle", () => ({
   useStyle: () => mockUseStyle,
 }));
 

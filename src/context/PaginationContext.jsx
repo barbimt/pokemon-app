@@ -1,10 +1,10 @@
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useState, useContext } from "react";
 import { ServiceContext } from "./ServiceContext";
 
 export const PaginationContext = createContext();
 
 const PaginationContextProvider = ({ children }) => {
-    const { pokemons, getPokemonsAxios } = useContext(ServiceContext);
+    const { getPokemonsAxios } = useContext(ServiceContext);
     const [ page, setPage ]= useState(1);
 
   const nextPage = () => {

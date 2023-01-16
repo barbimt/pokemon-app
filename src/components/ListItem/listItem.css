@@ -10,10 +10,16 @@ ul {
   position: relative;
   padding: 0.8rem 0.4rem;
 }
-
+.list-pokemons{
+  padding-top: 0.8rem;
+}
 .listPokemon li,
 button {
   z-index: 2;
+}
+
+.listPokemonMobile{
+  width: 100%;
 }
 
 .bg-opacity-list {
@@ -40,7 +46,7 @@ button {
   cursor: pointer;
   text-transform: capitalize;
   letter-spacing: 3px;
-  padding-left: 0.5rem;
+  padding-left: 0.9rem;
 }
 
 .darkList li {

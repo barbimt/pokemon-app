@@ -13,24 +13,12 @@ const Header: FC = () => {
   const { darkMode } = useTheme();
   const {isMobile} = useDimension();
   const { isOpen, toggle } = useDisclosure();
-  // const [dimensions, setDimensions] = useState({
-  //   width: window.innerWidth,
-  // });
-  // const dimensionMobile = dimensions.width >= 426;
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setDimensions({
-  //       width: window.innerWidth,
-  //     });
-  //   };
-  //   window.addEventListener("resize", handleResize);
-  // }, []);
 
   return (
     <header className={darkMode ? "header-dark" : ""}>
       <div>
         <div>
-          <h2 className={isMobile ? "" : "titleMobile"}>PokeAPI</h2>
+          <h2 className={isMobile ? "titleMobile" : "titleHeader "}>PokeAPI</h2>
         </div>
         {!isMobile ? (
           <nav>
