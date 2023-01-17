@@ -15,11 +15,11 @@ Desktop | Mobile
 
 - Comencé investigando la documentación de la [Poke API](https://pokeapi.co/docs/v2) y luego creé las interfaces con TypeScript para utlizar la información obtenida desde los endpoints. 
 - Utilicé TypeScript en el proyecto ya que es una buena práctica para asegurar que la variable siempre tenga el mismo propósito, además tiene un potencial de detección de errores durante el desarrollo del proyecto y esto me ayudó a un desarrollo más ágil y seguro.
-- Decidí separar la lógida de las vistas, es decir, los componentes de sus funcionalidades, aplicando el principio SOLID de responsabilidad única en la mayoría de ellos. 
+- Decidí separar la lógica de las vistas, es decir, los componentes de sus funcionalidades, aplicando el principio SOLID de responsabilidad única en la mayoría de ellos. 
 - Utilicé Axios para realizar las solicitudes al servidor y recibir las respuestas, me pareció una alternativa de fácil implementación. 
 - Además utilicé LocalStorage para persistir los pokemons favoritos y así poder mantener la información al recargar la página.
 - Usé CSS para estilar los componentes y creé variables CSS para la paleta de colores.
-- Añadí la posibilidad de cambiar la aplicación a modo oscuro, utilizando un Context, en el que se encuentra su estado y la lógica para cambiarlo. Con esto pude crear un componente "ToggleTheme" en el al hacer switch podemos llamar a la función y cambiar toda la página a modo oscuro o al revés. 
+- Añadí la posibilidad de cambiar la aplicación a modo oscuro, utilizando un Context, en el que se encuentra su estado y la lógica para cambiarlo. Con esto pude crear un componente "ToggleTheme" en el que al hacer switch podemos llamar a la función y cambiar toda la página a modo oscuro o al revés. 
 - Creé un componente para paginar los resultados de la API con un Context en el que se encuentra la lógica de este. 
 - También creé un componente para poder cambiar el modo de visualización de la página, en Lista o Grid. La lógica de este componente está abstraida dentro de un Context.
 - Realicé Responsive Design para Mobile, Tablet y Desktop, utilizando media queries y creé un customHook para validar las dimensiones de la página a los componentes que deberían ajustar su tamaño.
