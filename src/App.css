@@ -59,3 +59,39 @@ height: 44vh;
   --fourth-color: #363b81;
   --darkmode: #292929;
 }
+
+
+
+/*tablet*/
+@media screen and (max-width: 992px) {
+  .empty-message-dark {
+    height: 61vh;
+}
+.empty-message{
+  height: 55vh;
+}
+.dark{
+  /* min-height: 40vh; */
+}
+.light{
+  min-height: 75vh;
+}
+}
+
+/*mobile*/
+@media screen and (max-width: 426px) {
+  .empty-message{
+    height: 57vh;
+  }
+  .light{
+    min-height: 50vh;
+  }
+
+  .empty-message-dark {
+    min-height: 50vh;
+ }
+  .dark{
+    min-height: 80vh;
+  }
+
+}

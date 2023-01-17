@@ -9,9 +9,6 @@ header {
   background-color: var(--darkmode);
 }
 
-.titleHeader{
-
-}
 
 header > div {
   display: flex;

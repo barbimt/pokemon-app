@@ -20,7 +20,6 @@ const App: FC = () => {
           <FavouriteContextProvider>
             <PaginationContextProvider>
               <Layout>
-                {/* <Header /> */}
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="favorites" element={<Favourites />} />

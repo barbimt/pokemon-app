@@ -15,6 +15,7 @@ const ListItem: FC<{ pokemon: PokemonDetail }> = ({ pokemon }) => {
   let navigate = useNavigate();
   const redirectToDetailPage = () => {
     navigate(`/detail/${pokemon.id}`, { state: { pokemon: pokemon } });
+    window.scrollTo(0, 0);
   };
 
   return (
