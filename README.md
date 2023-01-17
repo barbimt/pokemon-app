@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# ![pokemonIcon](https://user-images.githubusercontent.com/82407633/212893061-6b17680a-dfb9-40c7-a6b7-1ba756e33d2d.png) Pokemon App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Deploy in Vercel](https://img.shields.io/badge/-DEPLOY-363b81)](https://pokemon-app-peach.vercel.app//) ![cursor](https://user-images.githubusercontent.com/82407633/181073703-2ee381cc-2a8c-4504-ba0f-51d0027cb4bf.png)
 
-## Available Scripts
+-------------
 
-In the project directory, you can run:
+Desktop | Mobile
+---------|---------
+<image src="https://user-images.githubusercontent.com/82407633/212900111-f2d2e58d-bf54-4d5a-ac1e-a5a305af4b7c.gif" /> | <image src="https://user-images.githubusercontent.com/82407633/212924991-06aec6e5-aea5-4eea-aa63-a75dd3e9b183.gif" />
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-------------
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨Proceso del desarrollo de la App✨
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Comencé investigando la documentación de la [Poke API](https://pokeapi.co/docs/v2) y luego creé las interfaces con TypeScript para utlizar la información obtenida desde los endpoints. 
+- Utilicé TypeScript en el proyecto ya que es una buena práctica para asegurar que la variable siempre tenga el mismo propósito, además tiene un potencial de detección de errores durante el desarrollo del proyecto y esto me ayudó a un desarrollo más ágil y seguro.
+- Decidí separar la lógida de las vistas, es decir, los componentes de sus funcionalidades, aplicando el principio SOLID de responsabilidad única en la mayoría de ellos. 
+- Utilicé Axios para realizar las solicitudes al servidor y recibir las respuestas, me pareció una alternativa de fácil implementación. 
+- Además utilicé LocalStorage para persistir los pokemons favoritos y así poder mantener la información al recargar la página.
+- Usé CSS para estilar los componentes y creé variables CSS para la paleta de colores.
+- Añadí la posibilidad de cambiar la aplicación a modo oscuro, utilizando un Context, en el que se encuentra su estado y la lógica para cambiarlo. Con esto pude crear un componente "ToggleTheme" en el al hacer switch podemos llamar a la función y cambiar toda la página a modo oscuro o al revés. 
+- Creé un componente para paginar los resultados de la API con un Context en el que se encuentra la lógica de este. 
+- También creé un componente para poder cambiar el modo de visualización de la página, en Lista o Grid. La lógica de este componente está abstraida dentro de un Context.
+- Realicé Responsive Design para Mobile, Tablet y Desktop, utilizando media queries y creé un customHook para validar las dimensiones de la página a los componentes que deberían ajustar su tamaño.
+- Utilicé React Context para crear estados y poder compartirlos en toda la aplicación.
+- Realicé tests unitarios en algunos componentes para validar la funcionalidad de ellos, creando mocks, que son imitaciones que simulan el comportamiento de los componentes reales. Utilicé JEST y React Testing Library ya que al crear la aplicación utilizando CRA(create-react-app) ya tenía por defecto todo configurado y listo para usarlos. 
