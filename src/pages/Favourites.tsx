@@ -9,12 +9,12 @@ import { useTheme } from "../hooks/useTheme";
 const Favourites: FC = () => {
   const { favouritePokemons } = useContext(FavouriteContext);
   const { darkMode } = useTheme();
-  const {styleSelected} = useContext(VisualizationContext)
+  const { styleSelected } = useContext(VisualizationContext);
 
   return (
     <>
-    
-      <div className={darkMode ? "dark" : "light"}>  <Visualization />
+      <div className={darkMode ? "dark" : "light"}>
+        <Visualization />
         {favouritePokemons.length === 0 ? (
           <div className={darkMode ? "empty-message-dark" : "empty-message"}>
             <h2>You don't have favourite Pokemons yet </h2>

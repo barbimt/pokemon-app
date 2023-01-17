@@ -9,9 +9,11 @@
 }
 
 body {
+ 
+  /* min-height: 100%; */
   font-family: "Pokemon", sans-serif;
   letter-spacing: 1.5px;
-  height: 100%;
+   height: 100%; 
   background-color: var(--background);
 }
 
@@ -27,20 +29,23 @@ html {
 
 .dark {
   background-color: var(--darkmode);
-  height: 100vh;
+  height: 90vh;
 }
 .bg-dark {
   background-color: var(--darkmode);
 }
 .empty-message-dark {
   background-color: var(--darkmode);
-  height: 100vh;
+  height: 110vh;
   text-align: center;
   padding: 5rem;
   color: var(--third-color);
   text-shadow: rgba(93, 185, 255, 0.9) 0px 0px 37px;
 }
 
+.empty-message{
+height: 44vh;
+}
 .empty-message h2 {
   text-align: center;
   margin: 5rem;
